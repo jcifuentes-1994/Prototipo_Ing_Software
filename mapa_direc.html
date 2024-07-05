@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Direcciones</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Incluye la API de Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_AQUI"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Mapa de Direcciones</h2>
+        
+        <div id="mapa" style="height: 400px;"></div>
+        
+        <div class="actions">
+            <button onclick="volver()">Volver</button>
+            <button onclick="imprimir()">Imprimir</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para inicializar el mapa
+        function initMap() {
+            // Coordenadas de ejemplo (Santiago, Chile)
+            var coordenadas = { lat: -33.4489, lng: -70.6693 };
+
+            // Opciones del mapa
+            var opcionesMapa = {
+                zoom: 12, // Nivel de zoom inicial
+                center: coordenadas // Centra el mapa en las coordenadas especificadas
+            };
+
+            // Crear el mapa en el elemento con id="mapa"
+            var mapa = new google.maps.Map(document.getElementById('mapa'), opcionesMapa);
+
+            // Ejemplo de marcador (puedes ajustarlo según tus necesidades)
+            var marcador = new google.maps.Marker({
+                position: coordenadas,
+                map: mapa,
+                title: 'Ubicación de ejemplo'
+            });
+        }
+
+        function volver() {
+            alert('Volviendo a la pantalla anterior.');
+            // Puedes redirigir o realizar alguna otra acción según tu flujo
+        }
+
+        function imprimir() {
+            alert('Imprimiendo el mapa.');
+            // Puedes utilizar funciones específicas de la API del mapa para imprimir o simplemente abrir una ventana de impresión
+        }
+    </script>
+
+    <!-- Llama a la función initMap() para inicializar el mapa -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_AQUI&callback=initMap"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Clientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Contacto</th>
+                    <th>Dirección</th>
+                    <th>Confirmar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>12345678</td>
+                    <td>Calle 123, Viña del Mar</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Maria López</td>
+                    <td>87654321</td>
+                    <td>Avenida 456, Valparaíso</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+        
+        <div class="actions">
+            <button onclick="enviarMensaje()">Enviar Mensaje</button>
+            <button onclick="volver()">Volver</button>
+        </div>
+    </div>
+
+    <script>
+        function enviarMensaje() {
+            // Aquí puedes agregar la lógica para enviar un mensaje a los clientes seleccionados
+            alert('Mensaje enviado a los clientes seleccionados.');
+        }
+
+        function volver() {
+            // Aquí puedes agregar la lógica para volver a la pantalla anterior
+            alert('Volviendo a la pantalla anterior.');
+            // Puedes redirigir o realizar alguna otra acción según tu flujo
+        }
+    </script>
+</body>
+</html>

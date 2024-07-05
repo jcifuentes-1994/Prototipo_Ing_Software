@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Productos y Medio de Pago</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Selección de Productos y Medio de Pago</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Cantidad de Productos</th>
+                    <th>Dirección</th>
+                    <th>Medio de Pago</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td><input type="number" min="1" max="10" value="1"></td>
+                    <td>Calle 123, Santiago</td>
+                    <td>
+                        <select>
+                            <option value="transbank">Transbank</option>
+                            <option value="efectivo">Efectivo</option>
+                            <option value="transferencia">Transferencia</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Maria López</td>
+                    <td><input type="number" min="1" max="10" value="1"></td>
+                    <td>Avenida 456, Valparaíso</td>
+                    <td>
+                        <select>
+                            <option value="transbank">Transbank</option>
+                            <option value="efectivo">Efectivo</option>
+                            <option value="transferencia">Transferencia</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+
+        <div class="actions">
+            <button onclick="volver()">Volver</button>
+            <button onclick="confirmarPedido()">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <script>
+        function volver() {
+            alert('Volviendo a la pantalla anterior.');
+            // Puedes redirigir o realizar alguna otra acción según tu flujo
+        }
+
+        function confirmarPedido() {
+            // Aquí puedes agregar la lógica para confirmar el pedido
+            alert('Pedido confirmado.');
+            // Puedes realizar acciones adicionales, como enviar la información a un servidor, etc.
+        }
+    </script>
+</body>
+</html>

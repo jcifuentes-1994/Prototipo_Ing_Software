@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Ruta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Seleccionar Ruta y Fecha</h2>
+        <select id="ruta">
+            <option value="quilpue">Quilpué / Villa Alemana</option>
+            <option value="vinadelmarA">Viña del Mar Alto</option>
+            <option value="vinadelmarC">Viña del Mar Centro</option>
+            <option value="concon">Concón</option>
+            <option value="renaca">Reñaca</option>
+            <option value="empresas">Empresas</option>
+            <!-- Agrega más opciones de ruta según sea necesario -->
+        </select>
+
+        <label for="fecha">Selecciona una fecha:</label>
+        <input type="text" id="fecha" placeholder="Selecciona una fecha">
+
+        <button onclick="confirmarRuta()">Confirmar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#fecha", {
+            dateFormat: "d-m-Y", // Formato de fecha YYYY-MM-DD
+            minDate: "today" // Evita seleccionar fechas anteriores a hoy
+        });
+
+        function confirmarRuta() {
+            var rutaSeleccionada = document.getElementById("ruta").value;
+            var fechaSeleccionada = document.getElementById("fecha").value;
+            
+            // Aquí puedes agregar la lógica para lo que sucede al confirmar la ruta y fecha
+            // Por ejemplo, redireccionar a la siguiente pantalla o mostrar un mensaje con la ruta y fecha seleccionadas
+            alert('Ruta ' + rutaSeleccionada + ' seleccionada para el día ' + fechaSeleccionada + '.');
+        }
+    </script>
+</body>
+</html>
